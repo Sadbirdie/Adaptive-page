@@ -1,0 +1,138 @@
+.footer {
+    background-color: var(--third-main-color);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.container__footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    background-image: url("../assets/images/Logo.svg");
+    width: 68px;
+    height: 68px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footer_rights {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.footer__copyright {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 141%;
+}
+
+.footer__author {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 141%;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.footer__tel {
+    font-size: 23px;
+    text-align: center;
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.footer__callback {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: underline;
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.footer__tel:hover,
+.footer__tel:focus,
+.footer__callback:hover,
+.footer__callback:focus {
+    color: var(--main-color);
+}
+
+.footer__tel-link {
+    display: none;
+}
+
+
+@media (max-width:1024px) {
+    .footer__logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer__tel {
+        font-size: 21px;
+    }
+
+    .footer__callback {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:480px) {
+    .footer {
+        padding-top: 35px;
+        padding-bottom: 15px;
+        background: linear-gradient(180deg, rgba(47, 50, 75, 1) 0% 65%, rgba(42, 44, 63, 1) 65%);
+    }
+
+    .container__footer {
+        flex-flow: row wrap;
+        row-gap: 40px;
+        padding-bottom: 0;
+    }
+
+    .footer__logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer__copyright {
+        font-size: 8px;
+    }
+
+    .footer__contacts {
+        display: none;
+    }
+
+    .footer__tel-link {
+        display: block;
+    }
+
+    .footer__tel-icon {
+        background-image: url("../assets/images/Phone.svg");
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .footer__tel-icon:hover,
+    .footer__tel-icon:focus {
+        filter: drop-shadow(0 0 20px var(--main-color));
+    }
+
+    .footer__author {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        color: #ffffffbf;
+    }
+}

@@ -1,0 +1,179 @@
+.header {
+    padding-top: 40px;
+    background-image: url("../assets/images/Background_title.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-bottom: 120px;
+}
+
+.header__logo {
+    width: 68px;
+    height: 68px;
+    background-image: url("../assets/images/Logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header__contacts {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.header__tel {
+    font-size: 23px;
+    text-align: center;
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.header__callback {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: underline;
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.header__tel:hover,
+.header__tel:focus,
+.header__callback:hover,
+.header__callback:focus {
+    color: var(--main-color);
+}
+
+.header__tel-link {
+    display: none;
+}
+
+
+.container__title {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    line-height: 1.1;
+}
+
+.title__header {
+    font-weight: 900;
+    font-size: 52px;
+    text-align: center;
+    color: #ffffffdb;
+    margin-bottom: 40px;
+}
+
+.title__text {
+    text-align: center;
+    color: #ffffffbf;
+    margin-bottom: 90px;
+    max-width: 960px;
+    line-height: 141%;
+}
+
+.title__button {
+    align-content: center;
+    width: 218px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border-radius: 50px;
+    transition-duration: 400ms;
+    transition-property: background-color, color;
+}
+
+.title__button:hover,
+.title__button:focus {
+    color: var(--third-main-color);
+    background-color: var(--second-main-color);
+}
+
+.title__button:active {
+    color: var(--third-main-color);
+    background-color: var(--second-main-color);
+    font-weight: 600;
+}
+
+@media (max-width:1024px) {
+    .header__logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header__tel {
+        font-size: 21px;
+    }
+
+    .header__callback {
+        font-size: 13px;
+    }
+
+    .title__header {
+        font-size: 40px;
+    }
+
+    .title__text {
+        max-width: 754px;
+    }
+}
+
+@media (max-width:480px) {
+    .header {
+        padding-top: 15px;
+        background-position: bottom left;
+    }
+
+    .container__header {
+        padding-bottom: 35px;
+    }
+
+    .header__logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+
+    .header__tel-link {
+        display: block;
+    }
+
+    .header__tel-icon {
+        background-image: url("../assets/images/Phone.svg");
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .header__tel-icon:hover,
+    .header__tel-icon:focus {
+        filter: drop-shadow(0 0 20px var(--main-color));
+    }
+
+    .title__header {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .title__text {
+        max-width: 290px;
+        margin-bottom: 60px;
+    }
+
+    .title__button {
+        width: 160px;
+        height: 38px;
+        font-size: 16px;
+    }
+}
